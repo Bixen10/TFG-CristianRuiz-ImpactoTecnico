@@ -1,0 +1,13 @@
+# Modelos GLMM (demasiado grandes para GitHub, >500MB c/u)
+*.nc
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
