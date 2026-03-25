@@ -1,0 +1,67 @@
+════════════════════════════════════════════════════════════════════════════════════════════════════
+                    GUÍA DEFINITIVA DE EFECTOS - HID (HIGH INTENSITY DISTANCE)
+                         MODELO HURDLE GAMMA BAYESIANO GLMM
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+📌 CONDICIONES DE REFERENCIA (baseline):
+   - Formato del Juego: LSG (Large-Sided Games)
+   - Polaridad: Polarizado
+   - Equilibrio: Equilibrio
+   - GrupoEdad: Cadete
+
+   Predicción base:
+   • μ (intensidad condicional | Y>0): 2.7016 m/min
+   • P(Y>0) (probabilidad de HID): 0.9123
+   • E[HID] (esperanza marginal): 2.4695 m/min
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+TOP 10 EFECTOS EN INTENSIDAD (μ)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+ 1. GrupoEdad                                 +4.2574 m/min (+156.87%) ✓
+ 2. Equilibrio:GrupoEdad                         +nan m/min (+120.24%) ✓
+ 3. Formato_del_Juego: SSG vs LSG             -2.0707 m/min ( -76.30%) ✓
+ 4. Formato_del_Juego:GrupoEdad                  +nan m/min ( +66.47%) ✓
+ 5. Polaridad: No_polarizado vs Polarizado    -1.0946 m/min ( -40.33%) ✓
+ 6. Polaridad:GrupoEdad                          +nan m/min ( -37.63%) ✓
+ 7. Equilibrio: Desequilibrio vs Equilibrio   +0.3846 m/min ( +14.17%) ✓
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+TOP 10 EFECTOS EN PROBABILIDAD (ψ)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+ 1. Formato_del_Juego: SSG vs LSG             -0.2817 prob ( -30.88%) ✓
+ 2. Equilibrio: Desequilibrio vs Equilibrio   -0.0960 prob ( -10.53%) ✓
+ 3. Polaridad: No_polarizado vs Polarizado    -0.0849 prob (  -9.31%) ✓
+ 4. GrupoEdad                                 +0.0469 prob (  +5.14%) ✓
+ 5. Formato_del_Juego:GrupoEdad                  +nan prob (   +nan%) ✓
+ 6. Polaridad:GrupoEdad                          +nan prob (   +nan%) ✓
+ 7. Equilibrio:GrupoEdad                         +nan prob (   +nan%) ✓
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+RANKING POR GRUPO DE EDAD (E[HID])
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+1. Juvenil               13.2032 m/min   Δ=+10.7337 (+434.65%)
+2. Senior Masculino      12.0285 m/min   Δ= +9.5590 (+387.08%)
+3. Cadete                 2.4695 m/min   Δ= +0.0000 (  +0.00%)
+4. Neskak                 1.4139 m/min   Δ= -1.0556 ( -42.75%)
+5. Infantil               0.3847 m/min   Δ= -2.0848 ( -84.42%)
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+INTERPRETACIÓN Y APLICACIÓN PRÁCTICA
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+✓ = Efecto creíble (intervalo HDI 95% no incluye cero)
+✗ = Efecto no creíble (intervalo incluye cero)
+
+Esta guía permite:
+• Diseñar tareas específicas ajustadas a objetivos de intensidad
+• Adaptar entrenamientos según el grupo de edad
+• Optimizar formatos de juego (SSG vs LSG)
+• Predecir efectos combinados de múltiples variables
+
+Para calcular la intensidad esperada en un escenario específico:
+1. Partir del valor de referencia (Cadete, LSG, Polarizado, Equilibrio)
+2. Aplicar el efecto de cada variable que difiera de la referencia
+3. Sumar/restar los cambios porcentuales o absolutos
